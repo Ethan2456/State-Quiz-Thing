@@ -5,7 +5,7 @@ Description
 States quiz.
 */
 #include <iostream>
-
+#include <time.h>
 using namespace std;
 
 int main(){
@@ -32,7 +32,7 @@ while(choice > 0){
         cout << "You chose the Capitol Option!" << endl;
         cout << "Stop" << endl;
     }
-    if(choice == 2){
+    else if(choice == 2){
         cout << "You chose the Cities Option!" << endl;
     }
 
