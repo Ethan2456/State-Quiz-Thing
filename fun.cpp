@@ -27,16 +27,26 @@ int main(){
     cout << "0) to quit." << endl;
     cin >> choice;
 
-while(choice > 0){
+
     if(choice == 1){
-        cout << "You chose the Capitol Option!" << endl;
-        cout << "Stop" << endl;
+        while(choice != 0){
+            int range = 50;
+            srand(time(NULL));
+            int rand_num = rand();
+            rand_num = rand_num % range;
+            string rand_state = cap1[rand_num];
+            cout << "You chose the Capitol Option!" << endl;
+            cout << "Your question is!" << endl;
+            cout << "What is " << rand_state << "?" << endl;
+            cout << "Do you want to play again?" << endl;
+            cin >> choice;
+        }
     }
     else if(choice == 2){
         cout << "You chose the Cities Option!" << endl;
     }
 
-}
+
 
 
 
