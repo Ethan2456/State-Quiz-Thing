@@ -9,7 +9,7 @@ States quiz.
 using namespace std;
 
 int main(){
-    string cap1[] = {"Alabama", "Alaska", "Arizona", "Arkansas","California",
+    string states[] = {"Alabama", "Alaska", "Arizona", "Arkansas","California",
                 "Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii",
                 "Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky",
                 "Louisiana","Maine","Maryland","Massachusetts","Michigan",
@@ -19,6 +19,13 @@ int main(){
                 "Pennsylvania","Rhode Island","South Carolina","South Dakota",
                 "Tennessee","Texas","Utah","Vermont","Virginia","Washington",
                 "West Virginia","Wisconsin","Wyoming"};
+
+    string caps[] = {"Montgomery","Juneau","Phoenix","Little Rock",
+                "Sacramento","Denver","Hartford","Dover","Tallahassee",
+                "Atlanta","Honolulu","Boise","Springfield","Indianapolis",
+                "Des Moines","Topeka","Frankfort","Baton Rouge","Augusta",
+                "Annapolis","Boston","Lansing","Saint Paul","Jackson",
+                "Jefferson City","Helena","Lincoln","Carson City","Concord"}
 
     int choice;
     cout << "Welcome to the US Geography Game!" << endl;
@@ -34,7 +41,7 @@ int main(){
             srand(time(NULL));
             int rand_num = rand();
             rand_num = rand_num % range;
-            string rand_state = cap1[rand_num];
+            string rand_state = states[rand_num];
             cout << "You chose the Capitol Option!" << endl;
             cout << "Your question is!" << endl;
             cout << "What is " << rand_state << "?" << endl;
