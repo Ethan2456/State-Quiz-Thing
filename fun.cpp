@@ -8,6 +8,14 @@ States quiz.
 #include <time.h>
 using namespace std;
 
+void choices(){
+    cout << "Would you like to play again?" << endl;
+    cout << "Choices:" << endl;
+    cout << "1)Capital Option" << endl;
+    cout << "2)State option" << endl;
+    cout << "0)Quit game" << endl;
+
+}
 
 
 
@@ -53,6 +61,7 @@ int main(){
             cout << "You chose the Capital Option!" << endl;
             cout << "Your question is!" << endl;
             cout << "What is the capital of " << rand_state << "?" << endl;
+            cin.ignore();
             getline(cin, answer);
             string capitols = caps[rand_num];
             if(answer == capitols){
@@ -61,8 +70,8 @@ int main(){
             else{
                 cout << endl << "U wrong!" << endl;
             }
-        cout << "Do you want to play again?" << endl;
-        cin >> choice;
+            cout << "Do you want to play again?" << endl;
+            cin >> choice;
         }
     }
     else if(choice == 2){
