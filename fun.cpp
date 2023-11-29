@@ -8,6 +8,9 @@ States quiz.
 #include <time.h>
 using namespace std;
 
+
+
+
 int main(){
     string states[] = {"Alabama", "Alaska", "Arizona", "Arkansas","California",
                 "Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii",
@@ -16,9 +19,9 @@ int main(){
                 "Minnesota","Mississippi","Missouri","Montana","Nebraska",
                 "Nevada","New Hampshire","New Jersey","New Mexico",
                 "New York", "North Carolina","North Dakota","Ohio","Oklahoma",
-                "Pennsylvania","Rhode Island","South Carolina","South Dakota",
-                "Tennessee","Texas","Utah","Vermont","Virginia","Washington",
-                "West Virginia","Wisconsin","Wyoming"};
+                "Oregon","Pennsylvania","Rhode Island","South Carolina",
+                "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia",
+                "Washington","West Virginia","Wisconsin","Wyoming"};
 
     string caps[] = {"Montgomery","Juneau","Phoenix","Little Rock",
                 "Sacramento","Denver","Hartford","Dover","Tallahassee",
@@ -41,20 +44,52 @@ int main(){
 
     if(choice == 1){
         while(choice != 0){
+            string answer;
             int range = 50;
             srand(time(NULL));
             int rand_num = rand();
             rand_num = rand_num % range;
             string rand_state = states[rand_num];
-            cout << "You chose the Capitol Option!" << endl;
+            cout << "You chose the Capital Option!" << endl;
             cout << "Your question is!" << endl;
-            cout << "What is " << rand_state << "?" << endl;
-            cout << "Do you want to play again?" << endl;
-            cin >> choice;
+            cout << "What is the capital of " << rand_state << "?" << endl;
+            getline(cin, answer);
+            string capitols = caps[rand_num];
+            if(answer == capitols){
+                cout << "Good job you got it right!" << endl;
+            }
+            else{
+                cout << "U wrong!" << endl;
+            }
+        cout << "Do you want to play?" << endl;
+        cin >> choice;
         }
     }
     else if(choice == 2){
-        cout << "You chose the Cities Option!" << endl;
+        while(choice != 0){
+            string answer;
+            int range = 50;
+            srand(time(NULL));
+            int rand_num = rand();
+            rand_num = rand_num % range;
+            string rand_caps = caps[rand_num];
+            cout << "You chose the state option" << endl;
+            cout << "Your question is!" << endl;
+            cout << "Which state is  " << rand_caps << " located in?" << endl;
+            cin.ignore();
+            getline(cin, answer);
+            string state = states[rand_num];
+            cout << state;
+
+            if(answer == state){
+                cout << "Good job you got it right!" << endl;
+            }
+            else{
+                cout << "U wrong!" << endl;
+            }
+        cout << "Do you want to play?" << endl;
+        cin >> choice;
+        }
     }
 
 
