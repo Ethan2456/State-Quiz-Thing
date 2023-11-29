@@ -56,12 +56,12 @@ int main(){
             getline(cin, answer);
             string capitols = caps[rand_num];
             if(answer == capitols){
-                cout << "Good job you got it right!" << endl;
+                cout << endl << "Good job you got it right!" << endl;
             }
             else{
-                cout << "U wrong!" << endl;
+                cout << endl << "U wrong!" << endl;
             }
-        cout << "Do you want to play?" << endl;
+        cout << "Do you want to play again?" << endl;
         cin >> choice;
         }
     }
@@ -82,12 +82,12 @@ int main(){
             cout << state;
 
             if(answer == state){
-                cout << "Good job you got it right!" << endl;
+                cout << endl << "Good job you got it right!" << endl;
             }
             else{
-                cout << "U wrong!" << endl;
+                cout << endl << "U wrong!" << endl;
             }
-        cout << "Do you want to play?" << endl;
+        cout << "Do you want to play again?" << endl;
         cin >> choice;
         }
     }
