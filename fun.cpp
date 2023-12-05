@@ -14,7 +14,7 @@ void choices(){
     cout << "1)Capital Option" << endl;
     cout << "2)State option" << endl;
     cout << "0)Quit game" << endl;
-    cout << "Your Option: " << endl;
+    cout << "Your Option: ";
 }
 
 
@@ -69,6 +69,7 @@ int main(){
             }
             else{
                 cout << endl << "U wrong!" << endl;
+                cout << "The answer is " << capitols << "." << endl;
             }
             choices();
             cin >> choice;
@@ -95,6 +96,7 @@ int main(){
             }
             else{
                 cout << endl << "U wrong!" << endl;
+                cout << "The answer is " << state << "." << endl;
             }
         choices();
         cin >> choice;
