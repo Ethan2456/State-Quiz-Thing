@@ -1,4 +1,2 @@
 # fun
-AP Computer Science stuff. For create task.
-
-# ¯\_(ツ)_/¯
+AP Computer Science stuff. For create task assignment.
