@@ -2,7 +2,10 @@
 Authors:Ethan T and Daniel B
 Date: 11/8/23
 Description
-States quiz.
+States quiz
+and capitol
+quiz.
+
 functions
 ------------
 void choices()
