@@ -17,6 +17,15 @@ void choices(){
     cout << "Your Option: ";
 }
 
+bool checkanswer(string ans, string rans){
+    if(ans == rans){
+        return true;
+    }
+    else{
+    return false;
+    }
+}
+
 
 
 int main(){
@@ -64,16 +73,16 @@ int main(){
              cin.ignore();
              getline(cin, answer);
              string capitols = caps[rand_num];
-             if(answer == capitols){
-                 cout << endl << "Good job you got it right!" << endl;
+             int t_f = checkanswer(answer,capitols);
+             if(t_f == 0){
+                 cout << endl << "You are wrong!" << endl;
+                 cout << "The answer is " << capitols << "." << endl;
              }
              else{
-                 cout << endl << "U wrong!" << endl;
-                 cout << "The answer is " << capitols << "." << endl;
+                 cout << endl << "You are correct!" << endl;
              }
              choices();
              cin >> choice;
-             cout << choice;
           }
           if(choice == 2){
             string answer;
@@ -88,14 +97,14 @@ int main(){
             cin.ignore();
             getline(cin, answer);
             string state = states[rand_num];
-            cout << state;
 
-            if(answer == state){
-                cout << endl << "Good job you got it right!" << endl;
+            int t_f = checkanswer(answer,state);
+            if(t_f == 0){
+                cout << endl << "You are wrong!" << endl;
+                cout << "The answer is " << states << "." << endl;
             }
             else{
-                cout << endl << "U wrong!" << endl;
-                cout << "The answer is " << state << "." << endl;
+                cout << endl << "You are correct!" << endl;
             }
             choices();
             cin >> choice;
