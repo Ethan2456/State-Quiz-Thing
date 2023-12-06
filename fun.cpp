@@ -110,7 +110,7 @@ int main(){
             int t_f = checkanswer(answer,state);
             if(t_f == 0){
                 cout << endl << "You are wrong!" << endl;
-                cout << "The answer is " << states << "." << endl;
+                cout << "The answer is " << state << "." << endl;
                 score = score - 1;
             }
             else{
