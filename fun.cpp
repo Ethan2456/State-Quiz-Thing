@@ -50,33 +50,32 @@ int main(){
     cin >> choice;
 
 
-    if(choice == 1){
-        while(choice != 0){
-            string answer;
-            int range = 50;
-            srand(time(NULL));
-            int rand_num = rand();
-            rand_num = rand_num % range;
-            string rand_state = states[rand_num];
-            cout << "You chose the Capital Option!" << endl;
-            cout << "Your question is!" << endl;
-            cout << "What is the capital of " << rand_state << "?" << endl;
-            cin.ignore();
-            getline(cin, answer);
-            string capitols = caps[rand_num];
-            if(answer == capitols){
-                cout << endl << "Good job you got it right!" << endl;
-            }
-            else{
-                cout << endl << "U wrong!" << endl;
-                cout << "The answer is " << capitols << "." << endl;
-            }
-            choices();
-            cin >> choice;
-        }
-    }
-    else if(choice == 2){
-        while(choice != 0){
+    while(choice != 0){
+           if(choice == 1){
+             string answer;
+             int range = 50;
+             srand(time(NULL));
+             int rand_num = rand();
+             rand_num = rand_num % range;
+             string rand_state = states[rand_num];
+             cout << "You chose the Capital Option!" << endl;
+             cout << "Your question is!" << endl;
+             cout << "What is the capital of " << rand_state << "?" << endl;
+             cin.ignore();
+             getline(cin, answer);
+             string capitols = caps[rand_num];
+             if(answer == capitols){
+                 cout << endl << "Good job you got it right!" << endl;
+             }
+             else{
+                 cout << endl << "U wrong!" << endl;
+                 cout << "The answer is " << capitols << "." << endl;
+             }
+             choices();
+             cin >> choice;
+             cout << choice;
+          }
+          if(choice == 2){
             string answer;
             int range = 50;
             srand(time(NULL));
@@ -98,9 +97,9 @@ int main(){
                 cout << endl << "U wrong!" << endl;
                 cout << "The answer is " << state << "." << endl;
             }
-        choices();
-        cin >> choice;
-        }
+            choices();
+            cin >> choice;
+            }
     }
 
 
